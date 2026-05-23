@@ -3,7 +3,7 @@
 // Modifie SITE_URL avec ton URL Vercel finale (ou un domaine perso) avant le
 // premier déploiement public. Les balises OG / Twitter en dépendent pour
 // résoudre l'image d'aperçu en URL absolue côté LinkedIn/X.
-const SITE_URL = 'https://design-md.vercel.app'
+const SITE_URL = 'https://design-md-mu.vercel.app'
 const SITE_TITLE = 'DESIGN.md, la même app, trois langages visuels'
 const SITE_DESCRIPTION = "J'ai écrit 3 fichiers DESIGN.md. Claude Code a généré 3 versions de la même landing Nuxt. Linear, Brutalist, Notion, même prompt, même contenu, trois identités."
 const SITE_OG_IMAGE = `${SITE_URL}/og.png`
@@ -52,8 +52,7 @@ export default defineNuxtConfig({
             + '&family=Lora:ital,wght@0,500;0,600;1,500;1,600'
             + '&display=swap',
         },
-        // Une icône simple, à remplacer par /favicon.png si tu en crées une.
-        { rel: 'icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
     },
   },
