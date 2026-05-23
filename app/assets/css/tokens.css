@@ -1,0 +1,259 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-sans, system-ui, sans-serif), sans-serif;
+    font-size: var(--text-base, 1rem);
+    line-height: var(--leading-normal, 1.5);
+    color: var(--text-primary, #111);
+    background: var(--bg-0, #fff);
+    -webkit-font-smoothing: antialiased;
+    transition: background 200ms ease, color 200ms ease;
+}
+
+a {
+    color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+[data-preset="linear"] {
+    --bg-0: #08090a;
+    --bg-1: #0d0e10;
+    --bg-2: #16181c;
+    --bg-3: #1f2126;
+
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-default: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.16);
+
+    --text-primary: #f7f8f8;
+    --text-secondary: #b4bcd0;
+    --text-tertiary: #8a8f98;
+    --text-disabled: #4c525c;
+
+    --accent: #5e6ad2;
+    --accent-hover: #6872e5;
+    --accent-faint: rgba(94, 106, 210, 0.12);
+
+    --success: #4cb782;
+    --warning: #f2c94c;
+    --danger: #eb5757;
+
+    --gradient-hero: linear-gradient(135deg, #5e6ad2 0%, #8b5cf6 50%, #d946ef 100%);
+    --gradient-faint: radial-gradient(circle at 30% 0%, rgba(94, 106, 210, 0.18), transparent 60%);
+
+    --font-sans: "Inter", "SF Pro Text", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+
+    --leading-tight: 1.1;
+    --leading-snug: 1.25;
+    --leading-normal: 1.5;
+
+    --tracking-tight: -0.02em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.04em;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 128px;
+
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-full: 9999px;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+    --ring: 0 0 0 2px var(--bg-0), 0 0 0 4px var(--accent);
+
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --duration-fast: 120ms;
+    --duration-base: 200ms;
+    --duration-slow: 400ms;
+}
+
+[data-preset="brutalist"] {
+    --bg-0: #FFFFFF;
+    --bg-1: #FFFFFF;
+    --bg-2: #FFFFFF;
+    --bg-3: #FFFFFF;
+
+    --border-subtle: #000000;
+    --border-default: #000000;
+    --border-strong: #000000;
+
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --text-tertiary: #000000;
+    --text-disabled: #000000;
+
+    --accent: #FFD400;
+    --accent-hover: #FFD400;
+    --accent-faint: #FFD400;
+
+    --success: #00FF00;
+    --warning: #FFD400;
+    --danger: #FF0000;
+
+    --gradient-hero: #FFD400;
+    --gradient-faint: transparent;
+
+    --font-sans: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+    --text-xs: 0.875rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.125rem;
+    --text-2xl: 2rem;
+    --text-3xl: 3rem;
+    --text-4xl: 5rem;
+
+    --leading-tight: 0.95;
+    --leading-snug: 1.1;
+    --leading-normal: 1.4;
+
+    --tracking-tight: 0;
+    --tracking-normal: 0;
+    --tracking-wide: 0.08em;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 48px;
+    --space-7: 64px;
+    --space-8: 96px;
+    --space-9: 128px;
+    --space-10: 160px;
+
+    --radius-sm: 0;
+    --radius-md: 0;
+    --radius-lg: 0;
+    --radius-xl: 0;
+    --radius-full: 0;
+
+    --shadow-sm: 4px 4px 0 #000000;
+    --shadow-md: 8px 8px 0 #000000;
+    --shadow-lg: 12px 12px 0 #000000;
+    --ring: 0 0 0 4px #FFD400, 0 0 0 6px #000000;
+
+    --ease-out: linear;
+    --ease-in-out: linear;
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+}
+
+[data-preset="notion"] {
+    --bg-0: #FBFAF9;
+    --bg-1: #FFFFFF;
+    --bg-2: #FFFFFF;
+    --bg-3: #F1F1EF;
+
+    --border-subtle: rgba(55, 53, 47, 0.06);
+    --border-default: rgba(55, 53, 47, 0.09);
+    --border-strong: rgba(55, 53, 47, 0.16);
+
+    --text-primary: #37352F;
+    --text-secondary: #787774;
+    --text-tertiary: #9B9A97;
+    --text-disabled: #C7C7C5;
+
+    --accent: #2383E2;
+    --accent-hover: #1A6FC4;
+    --accent-faint: rgba(35, 131, 226, 0.10);
+
+    --success: #4DAB9A;
+    --warning: #D9730D;
+    --danger: #E03E3E;
+
+    --gradient-hero: linear-gradient(180deg, #FBFAF9 0%, #FFFFFF 100%);
+    --gradient-faint: radial-gradient(circle at 50% 0%, rgba(35, 131, 226, 0.05), transparent 60%);
+
+    --font-sans: "Inter", "Segoe UI", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+    --font-serif: "Lora", "PT Serif", "Georgia", serif;
+    --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+
+    --text-xs: 0.8125rem;
+    --text-sm: 0.9375rem;
+    --text-base: 1.0625rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+
+    --leading-tight: 1.2;
+    --leading-snug: 1.35;
+    --leading-normal: 1.6;
+
+    --tracking-tight: -0.01em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.02em;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 128px;
+
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+
+    --shadow-sm: 0 1px 2px rgba(15, 15, 15, 0.05);
+    --shadow-md: 0 1px 3px rgba(15, 15, 15, 0.08), 0 4px 12px rgba(15, 15, 15, 0.04);
+    --shadow-lg: 0 4px 16px rgba(15, 15, 15, 0.06), 0 12px 40px rgba(15, 15, 15, 0.06);
+    --ring: 0 0 0 3px rgba(35, 131, 226, 0.25);
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration-fast: 150ms;
+    --duration-base: 200ms;
+    --duration-slow: 350ms;
+}
