@@ -11,6 +11,7 @@ const SITE_OG_IMAGE = `${SITE_URL}/og.png`
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  modules: ['@vercel/analytics/nuxt'],
   css: ['~/assets/css/tokens.css'],
   app: {
     head: {
